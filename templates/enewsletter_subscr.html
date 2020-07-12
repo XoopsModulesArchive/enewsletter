@@ -1,0 +1,78 @@
+<script language="JavaScript">
+<!--
+function check_req_fields(form) {
+	var errmsg = '';
+	if (form.user_nick.value.length == 0 || form.user_nick.value == '<{$lang_enter_surname}>')
+		errmsg += ' - Nick Name';
+	if (form.user_mail.value.length == 0 || form.user_mail.value == '<{$lang_enter_email}>')
+		errmsg += ' - Email Address';
+	if (errmsg == '') {
+		return true;
+	} else {
+		msg = '<{$lang_enter_fields}>:\n' + errmsg;
+		alert(msg);
+		return false;
+	}
+}
+//-->
+</script>
+<h4><{$en_title}></h4>	
+	  						
+	  
+
+<{if $val_subscriber_id==0}>	  
+	<form action='<{$xoops_url}>/modules/enewsletter/index.php' method='post' >
+	  <fieldset>
+	    <legend>Retrieve my subscription details</legend>
+	    Email: <input type='text' name='search_subscriber_mail' size='30' maxlength='100' value=''>	   
+		<input type=submit name='search_submit' value='<{$lang_submit_button}>'>
+		<input type='hidden' name='action' value='search_subscriber'>
+	  </fieldset>
+	</form>
+	<br/>
+<{/if}>
+
+<form action='<{$en_form_action}>' method='post' onsubmit='return check_req_fields(this)'>
+<table cellspacing='1' id='subscribe' class = "outer">
+<tr><td class = "status" colspan="2">
+<{section name=i loop=$en_message}>
+<{$en_message[i]}><br/>
+<{/section}>
+</td></tr>
+
+
+<tr><td class = "head"><{$lang_name}></td>
+<td class = "even" ><input name='user_name' type='text' size='30' maxlength='120' value='<{$en_realname}>'></td></tr>
+<tr>
+  <td class = "head">*<{$lang_nickname}></td>
+  <td class = "even" ><input type='text' name='user_nick' size='30' maxlength='40' value='<{$en_username}>'></td></tr>
+<tr><td class = "head"><span class="req">*</span><{$lang_email}></td>
+<td class = "even"><input type='text' name='user_mail' size='30' maxlength='100' value='<{$en_email}>'></td></tr>
+
+<{section name=i loop=$sub_options}>
+<tr>
+<td class = "head"><b>Subscribe to <{$sub_options[i].nletter_name}></b><br/><{$sub_options[i].nletter_description}></td>
+
+<td class = "even">
+Yes  <input type='radio' value='1'  name='newsletter_<{$sub_options[i].nletter_id}>' <{$sub_options[i].sub_bln_yes}>>  
+
+No   <input type='radio' value='0'  name='newsletter_<{$sub_options[i].nletter_id}>' <{$sub_options[i].sub_bln_no}>>
+
+
+
+</td>
+</tr>
+<{/section}>
+<tr>
+<td class = "head"><{$lang_emailtype}></td>
+<td class = "even"><{$lang_emailhtml}><input type='radio' value='0' checked name='user_format'> <{$lang_emailtxt}><input type='radio' value='1' name='user_format' ></td>
+</tr>
+<tr>
+<td class = "head"><{$lang_new_user}></td>
+<td class = "even"><{$lang_email_new_user}><input type='radio' value='0' <{if $val_subscriber_id==0}>CHECKED<{/if}> name='user_confirm'> <{$lang_email_confirm}><input type='radio' value='1' name='user_confirm'  <{if $val_subscriber_id>0}>CHECKED<{/if}>></td>
+</tr>
+<tr><td class = "head"><input type=submit name='subscribe' value='<{$lang_submit_button}>'></td><td class = "even"><span class="req"><{$lang_denote}></span></td></tr>
+</table>
+<input type='hidden' name='action' value='subscribe_conf'>
+</form>
+<div id="en_disclaimer"><{$EN_DISCLAIMER}></div>

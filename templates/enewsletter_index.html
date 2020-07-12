@@ -1,0 +1,25 @@
+<h4><{$lang_heading}></h4>
+
+<div class = "even"><b><{$lang_description_heading}></b></div><br />
+<div><{$lang_description}></div><br /><br />
+<div class = "even"><{$lang_most_recent_messages}></div><br />
+
+<{foreach item=message from=$messages}>
+<table width="100%"  cellpadding = "2" cellspacing = "2">
+  <tr align="left" valign="top">
+    <td width="20%" nowrap style="font-size: 80%; "><div><strong><{$message.time_sent}></strong></div>
+      <div><{$lang_message_num}> <{$message.mess_id}></div></td>
+    <td width="2%" nowrap>&nbsp;</td>
+    <td width="78%" style="font-size: 80%; "><div>&nbsp;<a href="message.php?action=view_mess&mess_id=<{$message.mess_id}>"><{$message.subject}></a> - <{$message.user_id}></div>
+	  <div>&nbsp;<{$message.message}></div></td>
+  </tr>
+</table>
+<{/foreach}>
+
+<br /><div><b><{$lang_total_messages}></b> (<a href="archives.php"><{$lang_view_archive}></a>)</div><br /><br />
+
+<div class = "even"><b><{$lang_join_newsletter}></b></div><br />
+<div>&nbsp;<{$lang_to_join}></div><br />
+<div><a href='<{$subscr_url}>'><img src='<{$news_images}>subscribe.gif' alt='[<{$lang_tooltip1}>]' hspace="0" vspace="0" border='0'></a></div>
+
+<br />

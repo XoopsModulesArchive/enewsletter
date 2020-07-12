@@ -1,0 +1,65 @@
+<h4><{$en_title}></h4>
+<center>
+<table border='0' width='100%' cellpadding='2' cellspacing='1'>
+<tr>
+	<td align='center'><b><{$lang_sort_by}></b>&nbsp;&nbsp;<{$lang_msgid}> 
+	(<a href='<{$en_archive_url}>?action=sort_ascend'><img src="images/down.gif" align="middle" alt="<{$lang_asc_sort}>"></a>
+	<a href='<{$en_archive_url}>?action=sort_descend'><img src="images/up.gif" align="middle" alt="<{$lang_des_sort}>"></a>)
+	&nbsp;&nbsp;<{$lang_subject}> (<a href='<{$en_archive_url}>?action=sort_subject_asc'><img src="images/down.gif" align="middle" alt="<{$lang_asc_subject_sort}>"></a>
+	<a href='<{$en_archive_url}>?action=sort_subject_des'><img src="images/up.gif" align="middle" alt="<{$lang_des_subject_sort}>"></a>)</td>
+</tr>
+</table>
+</center>
+<{if $en_action }><br /><div class = "even"><b><{$en_action}></b></div><{/if}>
+<{if $en_showsearch==true }>
+<center>
+<form action='<{$en_archive_url}>' method='post'>
+<input type='hidden' name='action' value='search'>
+<table cellpadding='2' cellspacing='1' class = 'outer'>
+<th colspan='3'><{$lang_search_option}></th>
+<tr >
+	<td width="30%" align="left" valign="top" class ='head'><{$lang_search_from_field}></td>
+	<td align="left" class ='even'><input type='text' name='from_text' size='40' maxlength='120' value='<{$en_from_text}>'><br><input type='checkbox' name='exclude' <{$en_exclude_from}>><{$lang_except1}></td>
+	<td align='left' class ='even'><input type='submit' name='search_type' value='<{$en_search_from}>'></td>
+</tr>
+<tr>
+	<td align="left" valign="top" class ='head'><{$lang_search_body}></td>
+	<td align="left" class ='even'><input type='text' name='body_text' size='40' maxlength='120' value='<{$en_body_text}>'><br><input type='checkbox' name='exclude' <{$en_exclude_body}>><{$lang_escept2}></td>
+	<td align='left' class ='even'><input type='submit' name='search_type' value='<{$en_search_body}>'></td>
+</tr>
+<tr>
+	<td align="left" valign="top" class ='head'><{$lang_search_subject}></td>
+	<td align="left" class ='even'><input type='text' name='subject_text' size='40' maxlength='120' value='<{$en_subject_text}>'><br><input type='checkbox' name='exclude' <{$en_exclude_subject}>><{$lang_except3}>.</td>
+	<td align='left' class ='even'><input type='submit' name='search_type' value='<{$en_search_subject}>'></td>
+</tr>
+<tr>
+	<td align="left" valign="top" class ='head'><{$lang_search_date}></td>
+	<td align="left" class ='even'><select name='date_month'><{html_options values=$en_month_ids output=$en_month_names selected=$en_selected_month}></select><select name='date_day'><{html_options values=$en_day_values output=$en_day_values selected=$en_selected_day}></select><select name='date_year'><{html_options values=$en_year_list output=$en_year_list selected=$en_selected_year}></select><br><{$lang_search_on_date}></td>
+	<td align='left' class ='even'><input type='submit' name='search_type' value='<{$en_search_date}>'></td>
+</tr>
+<tr><td align='center' colspan='3' class ='even'><{$lang_search_note}></td></tr>
+</table>
+</form>
+</center>
+<{/if}>
+
+<{if $en_pagenav.navbar == true }><div style="text-align:left;"><{$en_pagenav.navbar}></div><br /><{else}><br/><{/if}>
+<div><{$lang_mess_from_to}></div><br />
+<table  width='100%' cellpadding='2' cellspacing='1' class = 'outer'>
+<tr align="left">
+<th align = "center" width = "10%"><{$lang_msg}></th><th width = 50%><{$lang_subject}></th><th  width = "30%"><{$lang_from}></th><th  width = "10%" nowrap><{$lang_time}></th>
+<!--Start Message Display-->
+<{section name=msgcount loop=$en_messages}>
+<tr align="left">
+	<td class= "head" align = "center" width = "10%"><{$en_messages[msgcount].mess_id}></td>
+	<form method='post' action='<{$en_message_url}>'>
+	<td class = 'even' nowrap><a href="<{$en_message_url}>?action=view_mess&mess_id=<{$en_messages[msgcount].mess_id}>"><{$en_messages[msgcount].subject}></a></td>
+	<td class = 'even'><{$en_messages[msgcount].mess_from}></td>
+	<td class = 'even' nowrap><{$en_messages[msgcount].time_sent}></td>
+	</form>
+</tr>
+<{/section}>
+</table>
+<{if $en_pagenav.navbar }><br /><div style="text-align:right;"><{$en_pagenav.navbar}></div><br /><{else}><br/><{/if}>
+
+<div align='center'><a href='<{$en_archive_url}>?action=search'><{$lang_search_archives}></a></div>

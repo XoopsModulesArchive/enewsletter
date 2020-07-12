@@ -1,0 +1,10 @@
+<{if $val_subscriber_id==0}>	  
+	<form action='<{$xoops_url}>/modules/enewsletter/index.php' method='post' >
+	  <fieldset>
+	    <legend>Input email address</legend>
+	    <input type='text' name='search_subscriber_mail' size='30' maxlength='100' value=''>	   
+		<input type=submit name='search_submit' value='Submit'>
+		<input type='hidden' name='action' value='search_subscriber'>
+	  </fieldset>
+	</form>
+<{/if}>

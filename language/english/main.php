@@ -1,0 +1,97 @@
+<?php
+define("_EN_TITLE", "EvenNews");
+define("_EN_CONFIRM", "A confirmation email has been sent to you at %s. Please read the messsage and follow the instructions.");
+define("_EN_EMAILEXISTS", "The email address you have choosen is already in our database.<br />Please return and enter another email address.");
+define("_EN_RESENDCONFIRM", "Re-sending confirmation email to you at %s.");
+define("_EN_CONFIRM_SUBJECT", "Mailing List Confirmation");
+define("_EN_DISCLAIMER", "We at %s value your privacy, we will never sell or distribute for compensation your information.  You will only receive information regarding %s or its affiliates.  By joining the list you agree not to freak out if you receive an e-mail or two from us per week, sometimes less, sometimes more. At anytime you may remove yourself from the list if you think you joined in error.");
+define("_EN_SUBCTITLE", "%s - Subscribe to newsletter");
+define("_EN_ARCHIVETITLE", "Message Archive");
+define("_EN_MENU", "Archives Menu");
+define("_EN_MONTH_NONE", "None");
+define("_EN_MONTH_JAN", "January");
+define("_EN_MONTH_FEB", "February");
+define("_EN_MONTH_MAR", "March");
+define("_EN_MONTH_APR", "April");
+define("_EN_MONTH_MAY", "May");
+define("_EN_MONTH_JUN", "June");
+define("_EN_MONTH_JUL", "July");
+define("_EN_MONTH_AUG", "August");
+define("_EN_MONTH_SEP", "September");
+define("_EN_MONTH_OCT", "October");
+define("_EN_MONTH_NOV", "November");
+define("_EN_MONTH_DEC", "December");
+define("_EN_RESULTS_FROM",  " Results For \'from\'.");
+define("_EN_RESULTS_SUBJECT", " Results For \'subject\'.");
+define("_EN_RESULTS_BODY", " Results For \'body\'.");
+define("_EN_SORT_ASC", " Sorted in ascending order");
+define("_EN_SORT_DESC", " Sorted in descending order");
+define("_EN_SUB_SORT_DES", " Sorted by subject text (Descending)");
+define("_EN_SUB_SORT_ASC", " Sorted by subject text (Ascending)");
+define("_EN_CONFIRMSUCCESS", "Thank you for subscribing to our mailing list!");
+define("_EN_CONFIRMATION_NUMBER"," Confirmation #: ");
+define("_EN_PREVCONFIRM", "This email address has already been confirmed!");
+define("_EN_ARCHIVE_TITLE", "Archived Messages");
+define("_EN_SEARCH_FROM", "Search From");
+define("_EN_SEARCH_BODY", "Search Body");
+define("_EN_SEARCH_SUBJECT", "Search Subject");
+define("_EN_SEARCH_DATE", "Search by Date");
+define("_EN_VIEW_MESS", "Viewing Message #%s");
+define("_EN_SEARCH_ARCHIVES", "Search The Archives");
+define("_EN_ASC_SORT","List In Ascending Order");
+define("_EN_DES_SORT","List In Descending Order");
+define("_EN_ASC_SUBJECT_SORT","List By Subject Ascending");
+define("_EN_DES_SUBJECT_SORT","List By Subject Descending");
+define("_EN_TIME","Time");
+define("_EN_FROM","From");
+define("_EN_SUBJECT","Subject");
+define("_EN_VIEW","View");
+define("_EN_SEARCH_OPTION","Search Options");
+define("_EN_SEARCH_FROM_FIELD","Search From field:");
+define("_EN_EXCEPT1","Everything except this name.");
+define("_EN_EXCEPT2","Everything EXCEPT this text.");
+define("_EN_EXCEPT3","Everything that does NOT match this.");
+define("_EN_SEARCH_DATE_ON","Search for messages ON this date.");
+define("_EN_SEARCH_NOTE","NOTE: Searches are NOT case sensitive");
+define("_EN_MESSAGE_BODY","Message :");
+define("_EN_EMAILERROR","INTERNAL ERROR. Due to an error with our email system, we are unable to complete your subscribtion at the moment. <br /><br />Please report this error to the webmaster and we shall resend your confirmation email out to you or you can try again later.");
+define("_MD_WARNING","WARNING: Are you sure you want to delete this email?");
+define("_EN_GENERROR","There was an error submitting your information, please try again later.");
+define("_EN_REMOVED", "Your email address %s has been now been removed from our Newsletter database, and you will no longer receive our Newsletter. <br /><br />You are always welcome to subscribe again to our Newletter at anytime. Thank you.");
+define("_EN_REMERROR", "Notice: Unable to remove you from our Newsletter database. Either, you have not confirmed your account with us or you have already unsubscribed from our Newsletter yourself.");
+define("_EN_SUBTITLE", "%s - Subscribe from newsletter");
+define("_EN_EMAIL_ADRESS","Email Address");
+define("_EN_DENOTE","* denotes a required field");
+define("_EN_NICKNAME","Nickname: ");
+define("_EN_NAME","Name: ");
+define("_EN_EMAIL_TYPE","Email Format: ");
+define("_EN_EMAIL_TEXT","Text:");
+define("_EN_EMAIL_HTML","HTML:");
+define("_EN_NEWUSER","");
+define("_EN_EMAIL_NEWUSER","New:");
+define("_EN_EMAIL_CONFIRM","Existing:");  //Was : Resend Confirmation Email
+define("_EN_EMAIL_CONFIRM_YES","Yes");
+define("_EN_EMAIL_CONFIRM_No","No");
+define("_EN_SUBMITBTN","Submit");
+define("_EN_JS_ERROR1","[enter your real name]");
+define("_EN_JS_ERROR2","[enter your nickname]");
+define("_EN_JS_ERROR3","[enter your email address]");
+define("_EN_JS_ERROR4","You must fill out the following fields");
+define("_EN_JS_ERROR5","enter your user name");
+define("_EN_UNSUBTITLE", "%s - Unsubscribe from newsletter");
+define("_EN_BTNUNSUBSCRIBE", "Unsubscribe");
+define("_EN_ERROR1","[enter your email address]");
+define("_EN_TOOLTIP1","SUBSCRIBE");
+define("_EN_TOOLTIP2","UNSUBSCRIBE");
+define("_EN_STATUS", "Status");
+define("_EN_DATE", "Date");
+define("_EN_USERNAMEEXISTS", "This Username has already been taken, please go back and choose another");
+define("_EN_USERNAMEEXISTSANDEMAIL", "This Username and Email address you have entered have already been taken, please go back and try again.");
+define("_EN_NOUSERTOCONFIRM", "We could not find the username or Email address you specified in our database. Confirmation Email was not sent.");
+define("_EN_UNKNOWNERROR", "It seems you may have forgotten to enter some information that is required to process your subscription. Please go back and try again.");
+
+
+
+
+
+?>
